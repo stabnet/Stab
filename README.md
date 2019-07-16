@@ -1,4 +1,4 @@
-# Aeon
+# Stab
 
 [![Github All Releases](https://img.shields.io/github/downloads/aeonix/aeon/total.svg)](../../releases)
 [![GitHub release](https://img.shields.io/github/release/aeonix/aeon/all.svg)](../../releases/latest)
@@ -17,7 +17,7 @@
 Copyright (c) 2014-2018, AEON, The Monero Project.   
 Portions Copyright (c) 2012-2013 The Cryptonote developers.
 
-## Development resources
+## Aeon Development resources
 
 - Web: [aeon.cash](https://aeon.cash)
 - Bitcointalk: https://bitcointalk.org/index.php?topic=641696.0
@@ -32,7 +32,7 @@ Portions Copyright (c) 2012-2013 The Cryptonote developers.
 - Our [Vulnerability Response Process](https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md) encourages responsible disclosure
 - We are also available via [HackerOne](https://hackerone.com/monero)
 
-## Announcements
+## Aeon Announcements
 
 - You can subscribe to an [announcement list](https://docs.google.com/forms/d/e/1FAIpQLSci2UitA67N0W_xgSPLlGj6acGnTOtTdDR_ODZwXTHXZsWnCQ/viewform) to get critical announcements from the Aeon core team. The announcement list can be very helpful for knowing when software updates are needed.
 
@@ -44,21 +44,21 @@ Portions Copyright (c) 2012-2013 The Cryptonote developers.
 
 ## Introduction
 
-Aeon is a private, secure, untraceable, decentralised digital currency. You are your bank, you control your funds, and nobody can trace your transfers unless you allow them to do so.
+Stab is a private, secure, untraceable, decentralised digital currency. You are your bank, you control your funds, and nobody can trace your transfers unless you allow them to do so.
 
-**Privacy:** Aeon uses a cryptographically sound system to allow you to send and receive funds without your transactions being easily revealed on the blockchain (the ledger of transactions that everyone has). This ensures that your purchases, receipts, and all transfers remain absolutely private by default.
+**Privacy:** Stab uses a cryptographically sound system to allow you to send and receive funds without your transactions being easily revealed on the blockchain (the ledger of transactions that everyone has). This ensures that your purchases, receipts, and all transfers remain absolutely private by default.
 
 **Security:** Using the power of a distributed peer-to-peer consensus network, every transaction on the network is cryptographically secured. Individual wallets have a 25 word mnemonic seed that is only displayed once, and can be written down to backup the wallet. Wallet files are encrypted with a passphrase to ensure they are useless if stolen.
 
-**Untraceability:** By taking advantage of ring signatures, a special property of a certain type of cryptography, Aeon is able to ensure that transactions are not only untraceable, but have an optional measure of ambiguity that ensures that transactions cannot easily be tied back to an individual user or computer.
+**Untraceability:** By taking advantage of ring signatures, a special property of a certain type of cryptography, Stab is able to ensure that transactions are not only untraceable, but have an optional measure of ambiguity that ensures that transactions cannot easily be tied back to an individual user or computer.
 
 ## About this project
 
-This is the core implementation of Aeon. It is open source and completely free to use without restrictions, except for those specified in the license agreement below. There are no restrictions on anyone creating an alternative implementation of Aeon that uses the protocol and network in a compatible manner.
+This is the core implementation of Stab. It is open source and completely free to use without restrictions, except for those specified in the license agreement below. There are no restrictions on anyone creating an alternative implementation of Stab that uses the protocol and network in a compatible manner.
 
 As with many development projects, the repository on Github is considered to be the "staging" area for the latest changes. Before changes are merged into that branch on the main repository, they are tested by individual developers in their own branches, submitted as a pull request, and then subsequently tested by contributors who focus on testing and code reviews. That having been said, the repository should be carefully considered before using it in a production environment, unless there is a patch in the repository for a particular show-stopping issue you are experiencing. It is generally a better idea to use a tagged release for stability.
 
-**Anyone is welcome to contribute to Aeon's codebase!** If you have a fix or code change, feel free to submit it as a pull request directly to the "master" branch. In cases where the change is relatively small or does not affect other parts of the codebase it may be merged in immediately by any one of the collaborators. On the other hand, if the change is particularly large or complex, it is expected that it will be discussed at length either well in advance of the pull request being submitted, or even directly on the pull request.
+**Anyone is welcome to contribute to the Stab codebase!** If you have a fix or code change, feel free to submit it as a pull request directly to the "master" branch. In cases where the change is relatively small or does not affect other parts of the codebase it may be merged in immediately by any one of the collaborators. On the other hand, if the change is particularly large or complex, it is expected that it will be discussed at length either well in advance of the pull request being submitted, or even directly on the pull request.
 
 ## Supporting the project
 
@@ -90,7 +90,7 @@ If you want to help out, see [CONTRIBUTING](CONTRIBUTING.md) for a set of guidel
 
 ## Software upgrades
 
-Aeon uses a software upgrade (hard fork) mechanism to implement new features. This means that users of Aeon (end users and service providers) should run current versions and upgrade their software as needed. **In contrast to Monero, there is no fixed schedule for hard forks, and the schedule for the next fork will be determined organically through community discussion.** The required software for these upgrades will be available prior to the scheduled date. Please check the repository prior to this date for the proper Aeon software version. Below is the historical schedule and the projected schedule for the next upgrade.
+Stab uses a software upgrade (hard fork) mechanism to implement new features. This means that users of Stab (end users and service providers) should run current versions and upgrade their software as needed. **In contrast to Monero, there is no fixed schedule for hard forks, and the schedule for the next fork will be determined organically through community discussion.** The required software for these upgrades will be available prior to the scheduled date. Please check the repository prior to this date for the proper Stab software version. Below is the historical schedule and the projected schedule for the next upgrade.
 Dates are provided in the format YYYY-MM-DD. 
 
 
