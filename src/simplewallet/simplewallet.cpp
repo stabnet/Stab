@@ -5697,7 +5697,7 @@ bool simple_wallet::donate(const std::vector<std::string> &args_)
   local_args.push_back(amount_str);
   if (!payment_id_str.empty())
     local_args.push_back(payment_id_str);
-  message_writer() << (boost::format(tr("Donating %s %s to The Aeon Project (donate.aeon.cash or %s).")) % amount_str % cryptonote::get_unit(cryptonote::get_default_decimal_point()) % AEON_DONATION_ADDR).str();
+  message_writer() << (boost::format(tr("Donating %s %s to The Stab Project (donate.stab.fakewebsiteplaceholder or %s).")) % amount_str % cryptonote::get_unit(cryptonote::get_default_decimal_point()) % AEON_DONATION_ADDR).str();
   transfer(local_args);
   return true;
 }
@@ -8145,12 +8145,12 @@ int main(int argc, char* argv[])
   bool should_terminate = false;
   std::tie(vm, should_terminate) = wallet_args::main(
    argc, argv,
-   "aeon-wallet-cli [--wallet-file=<file>|--generate-new-wallet=<file>] [<COMMAND>]",
-    sw::tr("This is the command line Aeon wallet. It needs to connect to a Aeon\ndaemon to work correctly.\nWARNING: Do not reuse your Aeon keys on another fork, UNLESS this fork has key reuse mitigations built in. Doing so will harm your privacy."),
+   "stab-wallet-cli [--wallet-file=<file>|--generate-new-wallet=<file>] [<COMMAND>]",
+    sw::tr("This is the command line Stab wallet. It needs to connect to a Stab\ndaemon to work correctly.\nWARNING: Do not reuse your Stab keys on another fork, UNLESS this fork has key reuse mitigations built in. Doing so will harm your privacy."),
     desc_params,
     positional_options,
     [](const std::string &s, bool emphasis){ tools::scoped_message_writer(emphasis ? epee::console_color_white : epee::console_color_default, true) << s; },
-    "aeon-wallet-cli.log"
+    "stab-wallet-cli.log"
   );
 
   if (!vm)
