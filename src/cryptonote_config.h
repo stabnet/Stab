@@ -77,7 +77,7 @@
 
 #define DIFFICULTY_TARGET_V2                            480  // seconds
 #define DIFFICULTY_TARGET_V1                            240  // seconds - before first fork
-#define DIFFICULTY_WINDOW                               720 // blocks
+#define DIFFICULTY_WINDOW                               1440 // blocks
 #define DIFFICULTY_LAG                                  15  // !!!
 #define DIFFICULTY_CUT                                  60  // timestamps to cut after sorting
 #define DIFFICULTY_BLOCKS_COUNT                         (DIFFICULTY_WINDOW + DIFFICULTY_LAG)
