@@ -37,7 +37,7 @@
 
 TEST(AddressFromTXT, Success)
 {
-  std::string addr = "WmsSWgtT1JPg5e3cK41hKXSHVpKW7e47bjgiKmWZkYrhSS5LhRemNyqayaSBtAQ6517eo5PtH9wxHVmM78JDZSUu2W8PqRiNs";
+  std::string addr = "WmsuunshyHH8rDL17J7GQK8X7DCN5Pna3JccrFUAj8T33qHF3RDQFvG6XX7q3unRNUCzDpJDMjQGhRAdn3tkVVpJ121abBUCP";
 
   std::string txtr = "oa1:aeon";
   txtr += " recipient_address=";
