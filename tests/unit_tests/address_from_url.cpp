@@ -39,7 +39,7 @@ TEST(AddressFromTXT, Success)
 {
   std::string addr = "WmsuunshyHH8rDL17J7GQK8X7DCN5Pna3JccrFUAj8T33qHF3RDQFvG6XX7q3unRNUCzDpJDMjQGhRAdn3tkVVpJ121abBUCP";
 
-  std::string txtr = "oa1:aeon";
+  std::string txtr = "oa1:stab";
   txtr += " recipient_address=";
   txtr += addr;
   txtr += ";";
@@ -58,7 +58,7 @@ TEST(AddressFromTXT, Success)
 
   EXPECT_STREQ(addr.c_str(), res.c_str());
 
-  std::string txtr3 = "foobar oa1:aeon tx_description=\"Donation for Aeon Development Fund\"; ";
+  std::string txtr3 = "foobar oa1:stab tx_description=\"Donation for Stab Development Fund\"; ";
   txtr3 += "recipient_address=";
   txtr3 += addr;
   txtr3 += "; foobar";
@@ -70,7 +70,7 @@ TEST(AddressFromTXT, Success)
 
 TEST(AddressFromTXT, Failure)
 {
-  std::string txtr = "oa1:aeon recipient_address=not a real address";
+  std::string txtr = "oa1:stab recipient_address=not a real address";
 
   std::string res = tools::dns_utils::address_from_txt_record(txtr);
 
@@ -84,11 +84,11 @@ TEST(AddressFromTXT, Failure)
 
 TEST(AddressFromURL, Success)
 {
-  const std::string addr = AEON_DONATION_ADDR;
+  const std::string addr = STAB_DONATION_ADDR;
   
   bool dnssec_result = false;
 
-  std::vector<std::string> addresses = tools::dns_utils::addresses_from_url("donate.aeon.cash", dnssec_result);
+  std::vector<std::string> addresses = tools::dns_utils::addresses_from_url("donate.stab.fakewebsiteplaceholder", dnssec_result);
 
   EXPECT_EQ(1, addresses.size());
   if (addresses.size() == 1)
@@ -97,7 +97,7 @@ TEST(AddressFromURL, Success)
   }
 
   // OpenAlias address with an @ instead of first .
-  addresses = tools::dns_utils::addresses_from_url("donate@aeon.cash", dnssec_result);
+  addresses = tools::dns_utils::addresses_from_url("donate@stab.fakewebsiteplaceholder", dnssec_result);
   EXPECT_EQ(1, addresses.size());
   if (addresses.size() == 1)
   {
