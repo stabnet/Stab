@@ -75,8 +75,8 @@
 #define ORPHANED_BLOCKS_MAX_COUNT                       100
 
 
-#define DIFFICULTY_TARGET_V2                            360  // seconds
-#define DIFFICULTY_TARGET_V1                            90  // seconds - before first fork
+#define DIFFICULTY_TARGET_V2                            240  // seconds
+#define DIFFICULTY_TARGET_V1                            120  // seconds - before first fork
 #define DIFFICULTY_WINDOW                               720 // blocks
 #define DIFFICULTY_LAG                                  15  // !!!
 #define DIFFICULTY_CUT                                  60  // timestamps to cut after sorting
