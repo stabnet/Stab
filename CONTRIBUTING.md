@@ -1,6 +1,6 @@
-# Contributing to Aeon
+# Contributing to Stab
 
-Being a fork of Monero, Aeon shares most of its codebase with Monero while making a few critical modifications such
+Being a fork of Monero, Stab shares most of its codebase with Monero while making a few critical modifications such
 that it can offer a unique alternative to Monero. The codebase is intentionally kept close to Monero's in order to
 benefit from the higher code reliability due to the larger source of peer reviewing available in Monero.
 
@@ -34,8 +34,8 @@ The above effort is faciliated by avoiding the creation of unnecessary differenc
 request to Monero first, then send a corresponding PR to Aeon by cherry-picking, as described above. If your Monero PR
 is merged, your corresponding Aeon PR will then be merged subsequently.
 
-If you are to propose some changes that are specific to Aeon and distinct from Monero, submit a pull request directly
-to Aeon and justify your changes by laying out how they are *more* or *uniquely* applicable to Aeon. With a good
+If you are to propose some changes that are specific to Stab and distinct from Monero, submit a pull request directly
+to Stab and justify your changes by laying out how they are *more* or *uniquely* applicable to Stab. With a good
 justification the burden of increased maintenance cost as described above can be overcome.
 
 
