@@ -62,7 +62,7 @@
 #define CRYPTONOTE_REWARD_BLOCKS_WINDOW                 100
 #define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1    20000 //size of block (bytes) after which reward for block calculated using block size - before first fork
 #define CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE          600
-#define CRYPTONOTE_DISPLAY_DECIMAL_POINT                12
+#define CRYPTONOTE_DISPLAY_DECIMAL_POINT                2
 // COIN - number of smallest units in one coin
 #define COIN                                            ((uint64_t)1000000000000) // pow(10, 12)
 
