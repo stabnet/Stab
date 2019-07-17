@@ -54,7 +54,7 @@ class SpeedTest():
         daemon = Daemon()
         wallet = Wallet()
 
-        destinations = wallet.make_uniform_destinations('WmsSWgtT1JPg5e3cK41hKXSHVpKW7e47bjgiKmWZkYrhSS5LhRemNyqayaSBtAQ6517eo5PtH9wxHVmM78JDZSUu2W8PqRiNs',1,3)
+        destinations = wallet.make_uniform_destinations('WmsuunshyHH8rDL17J7GQK8X7DCN5Pna3JccrFUAj8T33qHF3RDQFvG6XX7q3unRNUCzDpJDMjQGhRAdn3tkVVpJ121abBUCP',1,3)
 
         self._test_speed_generateblocks(daemon=daemon, blocks=70)
         for i in range(1, 10):
@@ -68,7 +68,7 @@ class SpeedTest():
         print('Test speed of block generation')
         start = time.time()
 
-        res = daemon.generateblocks('WmsAX8KpL3NADH2pu4VKVE2mi7f4WS53W8ywgQWPWGcieuyAoNPa3F1JpT9772RTBBAo9vLfYKTzbVA5GR48bBf1263W9Tijy', blocks)
+        res = daemon.generateblocks('WmsuunshyHH8rDL17J7GQK8X7DCN5Pna3JccrFUAj8T33qHF3RDQFvG6XX7q3unRNUCzDpJDMjQGhRAdn3tkVVpJ121abBUCP', blocks)
             # wallet seed: velvet lymph giddy number token physics poetry unquoted nibs useful sabotage limits benches lifestyle eden nitrogen anvil fewest avoid batch vials washing fences goat unquoted
 
         print('generating ', blocks, 'blocks took: ', time.time() - start, 'seconds')
@@ -77,7 +77,7 @@ class SpeedTest():
         print('Test speed of transfer')
         start = time.time()
 
-        destinations = wallet.make_uniform_destinations('WmsSWgtT1JPg5e3cK41hKXSHVpKW7e47bjgiKmWZkYrhSS5LhRemNyqayaSBtAQ6517eo5PtH9wxHVmM78JDZSUu2W8PqRiNs',1)
+        destinations = wallet.make_uniform_destinations('WmsuunshyHH8rDL17J7GQK8X7DCN5Pna3JccrFUAj8T33qHF3RDQFvG6XX7q3unRNUCzDpJDMjQGhRAdn3tkVVpJ121abBUCP',1)
         res = wallet.transfer_split(destinations)
 
         print('generating tx took: ', time.time() - start, 'seconds')
