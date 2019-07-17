@@ -31,8 +31,8 @@ are prevented, although this is not a strict requirement.
 
 The above effort is faciliated by avoiding the creation of unnecessary differences in the repository. This implies that
 **any proposed changes which also apply to Monero should be submitted to Monero.** Specifically, please send a pull
-request to Monero first, then send a corresponding PR to Aeon by cherry-picking, as described above. If your Monero PR
-is merged, your corresponding Aeon PR will then be merged subsequently.
+request to Monero first, then send a corresponding PR to Stab by cherry-picking, as described above. If your Monero PR
+is merged, your corresponding Stab PR will then be merged subsequently.
 
 If you are to propose some changes that are specific to Stab and distinct from Monero, submit a pull request directly
 to Stab and justify your changes by laying out how they are *more* or *uniquely* applicable to Stab. With a good
