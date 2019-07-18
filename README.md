@@ -65,12 +65,6 @@ If you want to help out, see [CONTRIBUTING](CONTRIBUTING.md) for a set of guidel
 Stab uses a software upgrade (hard fork) mechanism to implement new features. This means that users of Stab (end users and service providers) should run current versions and upgrade their software as needed. **In contrast to Monero, there is no fixed schedule for hard forks, and the schedule for the next fork will be determined organically through community discussion.** The required software for these upgrades will be available prior to the scheduled date. Please check the repository prior to this date for the proper Stab software version. Below is the historical schedule and the projected schedule for the next upgrade.
 Dates are provided in the format YYYY-MM-DD. 
 
-
-| Software upgrade block height | Date       | Fork version | Minimum Stab version | Recommended Stab version | Details                                                                            |  
-| ------------------------------ | -----------| ----------------- | ---------------------- | -------------------------- | ---------------------------------------------------------------------------------- |
-| 592000                        | 2015-08-04 | v1 (exceptional, version not bumped)      | v0.9.0.0                 | v0.9.14.0                     | blocktime = 240 seconds, CryptoNight-Lite, lower mining priority for ringsize < 3       |
-| 963500                        | 2018-06-03 | v7                | v0.12.0.0                 | v0.12.9.0-aeon                    | Rebase to Monero's latest codebase with RingCT disabled, CryptoNight-Lite variant 1, limited use of ringsize 1, ban ringsize 2   |
-
 ## Compiling Stab from source
 
 ### Dependencies
@@ -188,7 +182,7 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 
 * `apt-get update && apt-get upgrade` to install all of the latest software
 
-* Install the dependencies for Aeon from the 'Debian' column in the table above.
+* Install the dependencies for Stab from the 'Debian' column in the table above.
 
 * Increase the system swap size:
 ```	
@@ -249,7 +243,7 @@ If you are using the older Raspbian Jessie image, compiling Stab is a bit more c
 ```
 * Wait ~4 hours
 
-* From here, follow the [general Raspberry Pi instructions](#on-the-raspberry-pi) from the "Clone Aeon and checkout most recent release version" step.
+* From here, follow the [general Raspberry Pi instructions](#on-the-raspberry-pi) from the "Clone Stab and checkout most recent release version" step.
 
 #### On Windows:
 
