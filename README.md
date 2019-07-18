@@ -622,7 +622,7 @@ There are two tools available:
 
 * ASAN
 
-Configure Aeon with the -D SANITIZE=ON cmake flag, eg:
+Configure Stab with the -D SANITIZE=ON cmake flag, eg:
 
     cd build/debug && cmake -D SANITIZE=ON -D CMAKE_BUILD_TYPE=Debug ../..
 
