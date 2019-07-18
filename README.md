@@ -558,9 +558,9 @@ setting the following configuration parameters and environment variables:
 * If you use the wallet with a Tor daemon via the loopback IP (eg, 127.0.0.1:9050),
   then use `--untrusted-daemon` unless it is your own hidden service.
 
-Example command line to start aeond through Tor:
+Example command line to start stabd through Tor:
 
-    DNS_PUBLIC=tcp torsocks aeond --p2p-bind-ip 127.0.0.1 --no-igd
+    DNS_PUBLIC=tcp torsocks stabd --p2p-bind-ip 127.0.0.1 --no-igd
 
 ### Using Tor on Tails
 
@@ -574,7 +574,7 @@ allow inbound connections. Full example:
 
 ## Debugging
 
-This section contains general instructions for debugging failed installs or problems encountered with Aeon. First ensure you are running the latest version built from the Github repo.
+This section contains general instructions for debugging failed installs or problems encountered with Stab. First ensure you are running the latest version built from the Github repo.
 
 ### Obtaining stack traces and core dumps on Unix systems
 
