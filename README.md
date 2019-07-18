@@ -207,7 +207,7 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 
 * The resulting executables can be found in `build/release/bin`
 
-* Add `PATH="$PATH:$HOME/aeon/build/release/bin"` to `.profile`
+* Add `PATH="$PATH:$HOME/stab/build/release/bin"` to `.profile`
 
 * Run Stab with `stabd --detach`
 
