@@ -20,7 +20,7 @@ ExecStart=/usr/bin/stabd --config-file /etc/stabd.conf \
 ## We have to use simple, not forking, because we cannot pass --detach
 ## because stderr/stdout is not available when detached, but torsocks
 ## attempts to write to it, and fails with 'invalid argument', causing
-## aeond to fail.
+## stabd to fail.
 #Type=simple
 #Environment=DNS_PUBLIC=tcp
 ## The following is needed only when accessing wallet from a different
