@@ -1702,8 +1702,8 @@ Si l&apos;argument &quot;tag_description&quot; est spécifié, le texte arbitrai
    Set the fee to default/unimportant/normal/elevated/priority.
  confirm-missing-payment-id &lt;1|0&gt;
  ask-password &lt;1|0&gt;
- unit &lt;aeon|milliaeon|microaeon|nanoaeon|picoaeon&gt;
-   Set the default aeon (sub-)unit.
+ unit &lt;stab|millistab|microstab|nanostab|picostab&gt;
+   Set the default stab (sub-)unit.
  min-outputs-count [n]
    Try to keep at least that many outputs of value at least min-outputs-value.
  min-outputs-value [n]
@@ -1737,8 +1737,8 @@ Si l&apos;argument &quot;tag_description&quot; est spécifié, le texte arbitrai
    Utiliser les frais pour la priorité par défaut/peu importante/normale/élevée/prioritaire.
  confirm-missing-payment-id &lt;1|0&gt;
  ask-password &lt;1|0&gt;
- unit &lt;aeon|milliaeon|microaeon|nanoaeon|picoaeon&gt;
-   Définir la (sous-)unité aeon par défaut.
+ unit &lt;stab|millistab|microstab|nanostab|picostab&gt;
+   Définir la (sous-)unité stab par défaut.
  min-outputs-count [n]
    Essayer de garder au moins ce nombre de sorties d&apos;une valeur d&apos;au moins min-outputs-value.
  min-outputs-value [n]
@@ -2610,8 +2610,8 @@ Attention : Certaines clés d&apos;entrées étant dépensées sont issues de <
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="1923"/>
-        <source>aeon, milliaeon, microaeon, nanoaeon, picoaeon</source>
-        <translation>aeon, milliaeon, microaeon, nanoaeon, picoaeon</translation>
+        <source>stab, millistab, microstab, nanostab, picostab</source>
+        <translation>stab, millistab, microstab, nanostab, picostab</translation>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="1975"/>
