@@ -1702,8 +1702,8 @@ Om argumentet &quot;tag_description&quot; anges, så tilldelas taggen &lt;taggna
    Set the fee to default/unimportant/normal/elevated/priority.
  confirm-missing-payment-id &lt;1|0>
  ask-password &lt;1|0>
- unit &lt;aeon|milliaeon|microaeon|nanoaeon|picoaeon>
-   Set the default aeon (sub-)unit.
+ unit &lt;stab|millistab|microstab|nanostab|picostab>
+   Set the default stab (sub-)unit.
  min-outputs-count [n]
    Try to keep at least that many outputs of value at least min-outputs-value.
  min-outputs-value [n]
@@ -1737,8 +1737,8 @@ Om argumentet &quot;tag_description&quot; anges, så tilldelas taggen &lt;taggna
    Sätt avgiften till default/unimportant/normal/elevated/priority.
  confirm-missing-payment-id &lt;1|0>
  ask-password &lt;1|0>
- unit &lt;aeon|milliaeon|microaeon|nanoaeon|picoaeon>
-   Ange standardvärde för aeonenhet.
+ unit &lt;stab|millistab|microstab|nanostab|picostab>
+   Ange standardvärde för stab.
  min-outputs-count [n]
    Försök att behålla åtminstone så många utgångar med åtminstone värdet min-outputs-value.
  min-outputs-value [n]
@@ -2609,8 +2609,8 @@ Varning: Några ingångsnycklar som spenderas kommer från </translation>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="1923"/>
-        <source>aeon, milliaeon, microaeon, nanoaeon, picoaeon</source>
-        <translation>aeon, milliaeon, microaeon, nanoaeon, picoaeon</translation>
+        <source>stab, millistab, microstab, nanostab, picostab</source>
+        <translation>stab, millistab, microstab, nanostab, picostab</translation>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="1975"/>
