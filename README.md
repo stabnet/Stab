@@ -1,30 +1,28 @@
 # Stab
 
-[![Github All Releases](https://img.shields.io/github/downloads/aeonix/aeon/total.svg)](../../releases)
-[![GitHub release](https://img.shields.io/github/release/aeonix/aeon/all.svg)](../../releases/latest)
-[![GitHub Release Date](https://img.shields.io/github/release-date-pre/aeonix/aeon.svg)](../../releases/latest)
-[![GitHub top language](https://img.shields.io/github/languages/top/aeonix/aeon.svg)](../../)
-[![GitHub language count](https://img.shields.io/github/languages/count/aeonix/aeon.svg)](../../)
-[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/aeonix/aeon.svg)](../../)
+[![Github All Releases](https://img.shields.io/github/downloads/stabnet/stab/total.svg)](../../releases)
+[![GitHub release](https://img.shields.io/github/release/stabnet/stab/all.svg)](../../releases/latest)
+[![GitHub Release Date](https://img.shields.io/github/release-date-pre/stabnet/stab.svg)](../../releases/latest)
+[![GitHub top language](https://img.shields.io/github/languages/top/stabnet/stab.svg)](../../)
+[![GitHub language count](https://img.shields.io/github/languages/count/stabnet/stab.svg)](../../)
+[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/stabnet/stab.svg)](../../)
 
-[![GitHub last commit](https://img.shields.io/github/last-commit/aeonix/aeon.svg)](../../)
-[![Github commits (since latest release)](https://img.shields.io/github/commits-since/aeonix/aeon/latest.svg)](../../)
-[![GitHub stars](https://img.shields.io/github/stars/aeonix/aeon.svg)](../../stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/aeonix/aeon.svg)](../../network)
-[![GitHub issues](https://img.shields.io/github/issues/aeonix/aeon.svg)](../../issues)
-[![GitHub closed issues](https://img.shields.io/github/issues-closed/aeonix/aeon.svg)](../../issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/stabnet/stab.svg)](../../)
+[![Github commits (since latest release)](https://img.shields.io/github/commits-since/stabnet/stab/latest.svg)](../../)
+[![GitHub stars](https://img.shields.io/github/stars/stabnet/stab.svg)](../../stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/stabnet/stab.svg)](../../network)
+[![GitHub issues](https://img.shields.io/github/issues/stabnet/stab.svg)](../../issues)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/stabnet/stab.svg)](../../issues)
 
+Copyright (c) 2019, STAB.
 Copyright (c) 2014-2018, AEON, The Monero Project.   
 Portions Copyright (c) 2012-2013 The Cryptonote developers.
 
-## Aeon Development resources
+## Stab Development resources
 
-- Web: [aeon.cash](https://aeon.cash)
-- Bitcointalk: https://bitcointalk.org/index.php?topic=641696.0
-- Reddit: https://www.reddit.com/r/Aeon
-- GitHub: [https://github.com/aeonix/aeon](https://github.com/aeonix/aeon)
-- IRC: [#aeon on Freenode](https://webchat.freenode.net/?randomnick=1&channels=%23aeon&prompt=1&uio=d4)
-- Discord: https://discord.gg/TM8mEsx
+- Web: [stabnet.github.io](https://stabnet.github.io/stab/)
+- Reddit: https://www.reddit.com/r/StabCoin
+- GitHub: [https://github.com/stabnet/stab](https://github.com/stabnet/stab)
 
 ## Vulnerability response
 
@@ -32,9 +30,9 @@ Portions Copyright (c) 2012-2013 The Cryptonote developers.
 - Our [Vulnerability Response Process](https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md) encourages responsible disclosure
 - We are also available via [HackerOne](https://hackerone.com/monero)
 
-## Aeon Announcements
+## Stab Announcements
 
-- You can subscribe to an [announcement list](https://docs.google.com/forms/d/e/1FAIpQLSci2UitA67N0W_xgSPLlGj6acGnTOtTdDR_ODZwXTHXZsWnCQ/viewform) to get critical announcements from the Aeon core team. The announcement list can be very helpful for knowing when software updates are needed.
+- You can subscribe to an [announcement list](https://stabnet.github.io/stab/) to get critical announcements from the Stab core team. The announcement list can be very helpful for knowing when software updates are needed.
 
 ## Coverage
 
@@ -150,7 +148,7 @@ Install all dependencies at once on Debian/Ubuntu 18.04:
 
 Clone recursively to pull-in needed submodule(s):
 
-`$ git clone --recursive https://github.com/stabnet/Stab`
+`$ git clone --recursive https://github.com/stabnet/stab`
 
 If you already have a repo cloned, initialize and update:
 
@@ -229,7 +227,7 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 
 * Clone Stab and checkout most recent release version:
 ```
-        git clone https://github.com/stabnet/Stab.git
+        git clone https://github.com/stabnet/stab.git
 	cd stab
 	git checkout tags/v0.12.9.0-stab
 ```
@@ -328,7 +326,7 @@ application.
 	
         cd stab
 
-* If you would like a specific [version/tag](https://github.com/stabnet/Stab/tags), do a git checkout for that version. eg. 'v0.12.9.0-stab'. If you dont care about the version and just want binaries from master, skip this step:
+* If you would like a specific [version/tag](https://github.com/stabnet/stab/tags), do a git checkout for that version. eg. 'v0.12.9.0-stab'. If you dont care about the version and just want binaries from master, skip this step:
 	
         git checkout v0.12.9.0-stab
 
