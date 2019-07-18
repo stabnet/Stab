@@ -20,7 +20,7 @@ Portions Copyright (c) 2012-2013 The Cryptonote developers.
 
 ## Stab Development resources
 
-- Web: [stabnet.github.io](https://stabnet.github.io/stab/)
+- Web: [stabnet.github.io/stab](https://stabnet.github.io/stab/)
 - Reddit: https://www.reddit.com/r/StabCoin
 - GitHub: [https://github.com/stabnet/stab](https://github.com/stabnet/stab)
 
