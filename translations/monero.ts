@@ -1681,8 +1681,8 @@ If the &quot;tag_description&quot; argument is specified, the tag &lt;tag_name&g
    Set the fee to default/unimportant/normal/elevated/priority.
  confirm-missing-payment-id &lt;1|0&gt;
  ask-password &lt;1|0&gt;
- unit &lt;aeon|milliaeon|microaeon|nanoaeon|picoaeon&gt;
-   Set the default aeon (sub-)unit.
+ unit &lt;stab|millistab|microstab|nanostab|picostab&gt;
+   Set the default stab (sub-)unit.
  min-outputs-count [n]
    Try to keep at least that many outputs of value at least min-outputs-value.
  min-outputs-value [n]
@@ -2539,7 +2539,7 @@ Warning: Some input keys being spent are from </source>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="1923"/>
-        <source>aeon, milliaeon, microaeon, nanoaeon, picoaeon</source>
+        <source>stab, millistab, microstab, nanostab, picostab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
