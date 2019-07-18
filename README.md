@@ -14,8 +14,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/stabnet/stab.svg)](../../issues)
 [![GitHub closed issues](https://img.shields.io/github/issues-closed/stabnet/stab.svg)](../../issues)
 
-Copyright (c) 2019, STAB.
-Copyright (c) 2014-2018, AEON, The Monero Project.   
+Copyright (c) 2014-2019, Stab, AEON, The Monero Project.   
 Portions Copyright (c) 2012-2013 The Cryptonote developers.
 
 ## Stab Development resources
