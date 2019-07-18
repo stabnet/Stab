@@ -99,7 +99,7 @@ Dates are provided in the format YYYY-MM-DD.
 | 592000                        | 2015-08-04 | v1 (exceptional, version not bumped)      | v0.9.0.0                 | v0.9.14.0                     | blocktime = 240 seconds, CryptoNight-Lite, lower mining priority for ringsize < 3       |
 | 963500                        | 2018-06-03 | v7                | v0.12.0.0                 | v0.12.9.0-aeon                    | Rebase to Monero's latest codebase with RingCT disabled, CryptoNight-Lite variant 1, limited use of ringsize 1, ban ringsize 2   |
 
-## Compiling Aeon from source
+## Compiling Stab from source
 
 ### Dependencies
 
@@ -150,15 +150,15 @@ Install all dependencies at once on Debian/Ubuntu 18.04:
 
 Clone recursively to pull-in needed submodule(s):
 
-`$ git clone --recursive https://github.com/aeonix/aeon`
+`$ git clone --recursive https://github.com/stabnet/Stab`
 
 If you already have a repo cloned, initialize and update:
 
-`$ cd aeon && git submodule init && git submodule update`
+`$ cd stab && git submodule init && git submodule update`
 
 ### Build instructions
 
-Aeon uses the CMake build system and a top-level [Makefile](Makefile) that
+Stab uses the CMake build system and a top-level [Makefile](Makefile) that
 invokes cmake commands as needed.
 
 #### On Linux and OS X
@@ -166,8 +166,8 @@ invokes cmake commands as needed.
 * Install the dependencies
 * Change to the root of the source code directory, change to the most recent release tag, and build:
 
-        cd aeon
-        git checkout v0.12.9.0-aeon
+        cd stab
+        git checkout v0.12.9.0-stab
         make
 
     *Optional*: If your machine has several cores and enough memory, enable
@@ -179,14 +179,14 @@ invokes cmake commands as needed.
     https://github.com/zeromq/cppzmq to `/usr/local/include` should fix that error.
     
     *Note*: The instructions above will compile the most stable release of the
-    Aeon software. If you would like to use and test the most recent software,
+    Stab software. If you would like to use and test the most recent software,
     use ```git checkout master```. The master branch may contain updates that are
     both unstable and incompatible with release software, though testing is always 
     encouraged. 
 
 * The resulting executables can be found in `build/release/bin`
 
-* Add `PATH="$PATH:$HOME/aeon/build/release/bin"` to `.profile`
+* Add `PATH="$PATH:$HOME/stab/build/release/bin"` to `.profile`
 
 * Run Stab with `stabd --detach`
 
@@ -227,11 +227,11 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 ```
 * If using an external hard disk without an external power supply, ensure it gets enough power to avoid hardware issues when syncing, by adding the line "max_usb_current=1" to /boot/config.txt
 
-* Clone Aeon and checkout most recent release version:
+* Clone Stab and checkout most recent release version:
 ```
-        git clone https://github.com/aeonix/aeon.git
-	cd aeon
-	git checkout tags/v0.12.9.0-aeon
+        git clone https://github.com/stabnet/stab.git
+	cd stab
+	git checkout tags/v0.12.9.0-stab
 ```
 * Build:
 ```
@@ -249,7 +249,7 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 
 #### *Note for Raspbian Jessie users:*
 
-If you are using the older Raspbian Jessie image, compiling Aeon is a bit more complicated. The version of Boost available in the Debian Jessie repositories is too old to use with Aeon, and thus you must compile a newer version yourself. The following explains the extra steps, and has been tested on a Raspberry Pi 2 with a clean install of minimal Raspbian Jessie.
+If you are using the older Raspbian Jessie image, compiling Stab is a bit more complicated. The version of Boost available in the Debian Jessie repositories is too old to use with Stab, and thus you must compile a newer version yourself. The following explains the extra steps, and has been tested on a Raspberry Pi 2 with a clean install of minimal Raspbian Jessie.
 
 * As before, `apt-get update && apt-get upgrade` to install all of the latest software, and increase the system swap size
 
@@ -260,7 +260,7 @@ If you are using the older Raspbian Jessie image, compiling Aeon is a bit more c
 	sudo /etc/init.d/dphys-swapfile start  
 ```
 
-* Then, install the dependencies for Aeon except `libunwind` and `libboost-all-dev`
+* Then, install the dependencies for Stab except `libunwind` and `libboost-all-dev`
 
 * Install the latest version of boost (this may first require invoking `apt-get remove --purge libboost*` to remove a previous version if you're not using a clean install):
 ```
@@ -320,17 +320,17 @@ application.
 
 * To git clone, run:
 
-        git clone --recursive https://github.com/aeonix/aeon.git
+        git clone --recursive https://github.com/stabnet/stab.git
 
 **Building**
 
 * Change to the cloned directory, run:
 	
-        cd aeon
+        cd stab
 
-* If you would like a specific [version/tag](https://github.com/aeonix/aeon/tags), do a git checkout for that version. eg. 'v0.12.9.0-aeon'. If you dont care about the version and just want binaries from master, skip this step:
+* If you would like a specific [version/tag](https://github.com/stabnet/Stab/tags), do a git checkout for that version. eg. 'v0.12.9.0-stab'. If you dont care about the version and just want binaries from master, skip this step:
 	
-        git checkout v0.12.9.0-aeon
+        git checkout v0.12.9.0-stab
 
 * If you are on a 64-bit system, run:
 
@@ -354,9 +354,9 @@ application.
 
 ### On FreeBSD:
 
-The project can be built from scratch by following instructions for Linux above. If you are running Aeon in a jail you need to add the flag: `allow.sysvipc=1` to your jail configuration, otherwise lmdb will throw the error message: `Failed to open lmdb environment: Function not implemented`.
+The project can be built from scratch by following instructions for Linux above. If you are running Stab in a jail you need to add the flag: `allow.sysvipc=1` to your jail configuration, otherwise lmdb will throw the error message: `Failed to open lmdb environment: Function not implemented`.
 
-We expect to add Aeon into the ports tree in the near future, which will aid in managing installations using ports or packages.
+We expect to add Stab into the ports tree in the near future, which will aid in managing installations using ports or packages.
 
 ### On OpenBSD:
 
@@ -371,7 +371,7 @@ The doxygen and graphviz packages are optional and require the xbase set.
 The Boost package has a bug that will prevent librpc.a from building correctly. In order to fix this, you will have to Build boost yourself from scratch. Follow the directions here (under "Building Boost"):
 https://github.com/bitcoin/bitcoin/blob/master/doc/build-openbsd.md
 
-You will have to add the serialization, date_time, and regex modules to Boost when building as they are needed by Aeon.
+You will have to add the serialization, date_time, and regex modules to Boost when building as they are needed by Stab.
 
 To build: `env CC=egcc CXX=eg++ CPP=ecpp DEVELOPER_LOCAL_TOOLS=1 BOOST_ROOT=/path/to/the/boost/you/built make release-static-64`
 
@@ -446,7 +446,7 @@ cmake ..
 doas make install
 ```
 
-Build Aeon: `env DEVELOPER_LOCAL_TOOLS=1 BOOST_ROOT=/usr/local make release-static`
+Build Stab: `env DEVELOPER_LOCAL_TOOLS=1 BOOST_ROOT=/usr/local make release-static`
 
 ### On Solaris:
 
@@ -462,13 +462,13 @@ Then you can run make as usual.
 ### On Linux for Android (using docker):
 
         # Build image (for ARM 32-bit)
-        docker build -f utils/build_scripts/android32.Dockerfile -t aeon-android .
+        docker build -f utils/build_scripts/android32.Dockerfile -t stab-android .
         # Build image (for ARM 64-bit)
-        docker build -f utils/build_scripts/android64.Dockerfile -t aeon-android .
+        docker build -f utils/build_scripts/android64.Dockerfile -t stab-android .
         # Create container
-        docker create -it --name aeon-android aeon-android bash
+        docker create -it --name stab-android stab-android bash
         # Get binaries
-        docker cp aeon-android:/src/build/release/bin .
+        docker cp stab-android:/src/build/release/bin .
 
 ### Building portable statically linked binaries
 
@@ -482,7 +482,7 @@ By default, in either dynamically or statically linked builds, binaries target t
 * ```make release-static-win64``` builds binaries on 64-bit Windows portable across 64-bit Windows systems
 * ```make release-static-win32``` builds binaries on 64-bit or 32-bit Windows portable across 32-bit Windows systems
 
-## Installing Aeon from a package
+## Installing Stab from a package
 
 **DISCLAIMER: These packages are not part of this repository or maintained by this project's contributors, and as such, do not go through the same review process to ensure their trustworthiness and security.**
 
@@ -490,7 +490,7 @@ Packages are available for
 
 * (**TODO**) ~Ubuntu and [snap supported](https://snapcraft.io/docs/core/install) systems, via a community contributed build.~
 
-        snap install aeon --beta
+        snap install stab --beta
 
 ~Installing a snap is very quick. Snaps are secure. They are isolated with all of their dependencies. Snaps also auto update when a new version is released.~
 
@@ -500,30 +500,30 @@ Packages are available for
 
 * (**TODO**) ~Void Linux:~
 
-        xbps-install -S aeon
+        xbps-install -S stab
 
 * (**TODO**) ~GuixSD~
 
-        guix package -i aeon
+        guix package -i stab
 
 * OS X via [Homebrew](https://brew.sh)
 
-        brew tap sammy007/aeon
-        brew install aeon -v
+        brew tap sammy007/stab
+        brew install stab -v
 
 * Docker
 
         # Build using all available cores
-        docker build -t aeon .
+        docker build -t stab .
 
         # or build using a specific number of cores (reduce RAM requirement)
-        docker build --build-arg NPROC=1 -t aeon .
+        docker build --build-arg NPROC=1 -t stab .
      
         # either run in foreground
-        docker run -it -v /aeon/chain:/root/.aeon -v /aeon/wallet:/wallet -p 11180:11180 aeon
+        docker run -it -v /stab/chain:/root/.stab -v /stab/wallet:/wallet -p 11180:11180 stab
 
         # or in background
-        docker run -it -d -v /aeon/chain:/root/.aeon -v /aeon/wallet:/wallet -p 11180:11180 aeon
+        docker run -it -d -v /stab/chain:/root/.stab -v /stab/wallet:/wallet -p 11180:11180 stab
 
 * The build needs 3 GB space.
 * Wait one  hour or more
