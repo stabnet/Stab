@@ -541,7 +541,7 @@ setting the following configuration parameters and environment variables:
   desired DNS server, for DNS requests to go over TCP, so that they are routed
   through Tor. When IP is not specified, stabd uses the default list of
   servers defined in [src/common/dns_utils.cpp](src/common/dns_utils.cpp).
-* `TORSOCKS_ALLOW_INBOUND=1` to tell torsocks to allow aeond to bind to interfaces
+* `TORSOCKS_ALLOW_INBOUND=1` to tell torsocks to allow stabd to bind to interfaces
    to accept connections from the wallet. On some Linux systems, torsocks
    allows binding to localhost by default, so setting this variable is only
    necessary to allow binding to local LAN/VPN interfaces to allow wallets to
