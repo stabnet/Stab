@@ -229,7 +229,7 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 
 * Clone Stab and checkout most recent release version:
 ```
-        git clone https://github.com/stabnet/stab.git
+        git clone https://github.com/stabnet/Stab.git
 	cd stab
 	git checkout tags/v0.12.9.0-stab
 ```
