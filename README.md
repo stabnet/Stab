@@ -461,8 +461,8 @@ Packages are available for
 ~Installing a snap is very quick. Snaps are secure. They are isolated with all of their dependencies. Snaps also auto update when a new version is released.~
 
 * (**TODO**) ~Arch Linux (via [AUR](https://aur.archlinux.org/)):~
-  - ~Stable release: [`aeon`](https://aur.archlinux.org/packages/aeon)~
-  - ~Bleeding edge: [`aeon-git`](https://aur.archlinux.org/packages/aeon-git)~
+  - ~Stable release: [`stab`](https://aur.archlinux.org/packages/stab)~
+  - ~Bleeding edge: [`stab-git`](https://aur.archlinux.org/packages/stab-git)~
 
 * (**TODO**) ~Void Linux:~
 
