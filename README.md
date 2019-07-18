@@ -188,7 +188,7 @@ invokes cmake commands as needed.
 
 * Add `PATH="$PATH:$HOME/aeon/build/release/bin"` to `.profile`
 
-* Run Aeon with `aeond --detach`
+* Run Stab with `stabd --detach`
 
 * **Optional**: build and run the test suite to verify the binaries:
 
@@ -243,7 +243,7 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 
 * Add `PATH="$PATH:$HOME/aeon/build/release/bin"` to `.profile`
 
-* Run Aeon with `aeond --detach`
+* Run Stab with `stabd --detach`
 
 * You may wish to reduce the size of the swap file after the build has finished, and delete the boost directory from your home directory
 
@@ -530,15 +530,15 @@ Packages are available for
 
 Packaging for your favorite distribution would be a welcome contribution!
 
-## Running aeond
+## Running stabd
 
 The build places the binary in `bin/` sub-directory within the build directory
 from which cmake was invoked (repository root by default). To run in
 foreground:
 
-    ./bin/aeond
+    ./bin/stabd
 
-To list all available options, run `./bin/aeond --help`.  Options can be
+To list all available options, run `./bin/stabd --help`.  Options can be
 specified either on the command line or in a configuration file passed by the
 `--config-file` argument.  To specify an option in the configuration file, add
 a line with the syntax `argumentname=value`, where `argumentname` is the name
@@ -546,17 +546,17 @@ of the argument without the leading dashes, for example `log-level=1`.
 
 To run in background:
 
-    ./bin/aeond --log-file aeond.log --detach
+    ./bin/stabd --log-file stabd.log --detach
 
 To run as a systemd service, copy
-[aeond.service](utils/systemd/aeond.service) to `/etc/systemd/system/` and
-[aeond.conf](utils/conf/aeond.conf) to `/etc/`. The [example
-service](utils/systemd/aeond.service) assumes that the user `aeon` exists
+[stabd.service](utils/systemd/stabd.service) to `/etc/systemd/system/` and
+[stabd.conf](utils/conf/stabd.conf) to `/etc/`. The [example
+service](utils/systemd/stabd.service) assumes that the user `stab` exists
 and its home is the data directory specified in the [example
-config](utils/conf/aeond.conf).
+config](utils/conf/stabd.conf).
 
 If you're on Mac, you may need to add the `--max-concurrency 1` option to
-aeon-wallet-cli, and possibly aeond, if you get crashes refreshing.
+stab-wallet-cli, and possibly stabd, if you get crashes refreshing.
 
 ## Internationalization
 
@@ -564,16 +564,16 @@ See [README.i18n.md](README.i18n.md).
 
 ## Using Tor
 
-While Aeon isn't made to integrate with Tor, it can be used wrapped with torsocks, by
+While Stab isn't made to integrate with Tor, it can be used wrapped with torsocks, by
 setting the following configuration parameters and environment variables:
 
 * `--p2p-bind-ip 127.0.0.1` on the command line or `p2p-bind-ip=127.0.0.1` in
-  aeond.conf to disable listening for connections on external interfaces.
-* `--no-igd` on the command line or `no-igd=1` in aeond.conf to disable IGD
+  stabd.conf to disable listening for connections on external interfaces.
+* `--no-igd` on the command line or `no-igd=1` in stabd.conf to disable IGD
   (UPnP port forwarding negotiation), which is pointless with Tor.
 * `DNS_PUBLIC=tcp` or `DNS_PUBLIC=tcp://x.x.x.x` where x.x.x.x is the IP of the
   desired DNS server, for DNS requests to go over TCP, so that they are routed
-  through Tor. When IP is not specified, aeond uses the default list of
+  through Tor. When IP is not specified, stabd uses the default list of
   servers defined in [src/common/dns_utils.cpp](src/common/dns_utils.cpp).
 * `TORSOCKS_ALLOW_INBOUND=1` to tell torsocks to allow aeond to bind to interfaces
    to accept connections from the wallet. On some Linux systems, torsocks
@@ -582,7 +582,7 @@ setting the following configuration parameters and environment variables:
    connect from remote hosts. On other systems, it may be needed for local wallets
    as well.
 * Do NOT pass `--detach` when running through torsocks with systemd, (see
-  [utils/systemd/aeond.service](utils/systemd/aeond.service) for details).
+  [utils/systemd/stabd.service](utils/systemd/stabd.service) for details).
 * If you use the wallet with a Tor daemon via the loopback IP (eg, 127.0.0.1:9050),
   then use `--untrusted-daemon` unless it is your own hidden service.
 
@@ -597,7 +597,7 @@ to add a rule to allow this connection too, in addition to telling torsocks to
 allow inbound connections. Full example:
 
     sudo iptables -I OUTPUT 2 -p tcp -d 127.0.0.1 -m tcp --dport 11181 -j ACCEPT
-    DNS_PUBLIC=tcp torsocks ./aeond --p2p-bind-ip 127.0.0.1 --no-igd --rpc-bind-ip 127.0.0.1 \
+    DNS_PUBLIC=tcp torsocks ./stabd --p2p-bind-ip 127.0.0.1 --no-igd --rpc-bind-ip 127.0.0.1 \
         --data-dir /home/amnesia/Persistent/your/directory/to/the/blockchain
 
 ## Debugging
@@ -615,7 +615,7 @@ Run the build.
 Once it stalls, enter the following command:
 
 ```
-gdb /path/to/aeond `pidof aeond` 
+gdb /path/to/stabd `pidof stabd` 
 ```
 
 Type `thread apply all bt` within gdb in order to obtain the stack trace
@@ -628,21 +628,21 @@ Enter `echo core | sudo tee /proc/sys/kernel/core_pattern` to stop cores from be
 
 Run the build.
 
-When it terminates with an output along the lines of "Segmentation fault (core dumped)", there should be a core dump file in the same directory as aeond. It may be named just `core`, or `core.xxxx` with numbers appended.
+When it terminates with an output along the lines of "Segmentation fault (core dumped)", there should be a core dump file in the same directory as stabd. It may be named just `core`, or `core.xxxx` with numbers appended.
 
 You can now analyse this core dump with `gdb` as follows:
 
-`gdb /path/to/aeond /path/to/dumpfile`
+`gdb /path/to/stabd /path/to/dumpfile`
 
 Print the stack trace with `bt`
 
-* To run aeond within gdb:
+* To run stabd within gdb:
 
-Type `gdb /path/to/aeond`
+Type `gdb /path/to/stabd`
 
 Pass command-line options with `--args` followed by the relevant arguments
 
-Type `run` to run aeond
+Type `run` to run stabd
 
 ### Analysing memory corruption
 
@@ -654,11 +654,11 @@ Configure Aeon with the -D SANITIZE=ON cmake flag, eg:
 
     cd build/debug && cmake -D SANITIZE=ON -D CMAKE_BUILD_TYPE=Debug ../..
 
-You can then run the aeon tools normally. Performance will typically halve.
+You can then run the stab tools normally. Performance will typically halve.
 
 * valgrind
 
-Install valgrind and run as `valgrind /path/to/aeond`. It will be very slow.
+Install valgrind and run as `valgrind /path/to/stabd`. It will be very slow.
 
 ### LMDB
 
@@ -666,7 +666,7 @@ Instructions for debugging suspected blockchain corruption as per @HYC
 
 There is an `mdb_stat` command in the LMDB source that can print statistics about the database but it's not routinely built. This can be built with the following command:
 
-`cd ~/aeon/external/db_drivers/liblmdb && make`
+`cd ~/stab/external/db_drivers/liblmdb && make`
 
 The output of `mdb_stat -ea <path to blockchain dir>` will indicate inconsistencies in the blocks, block_heights and block_info table.
 
