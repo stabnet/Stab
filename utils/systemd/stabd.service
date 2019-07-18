@@ -1,19 +1,19 @@
 [Unit]
-Description=Aeon Full Node
+Description=Stab Full Node
 After=network.target
 
 [Service]
-User=aeon
-Group=aeon
+User=stab
+Group=stab
 WorkingDirectory=~
-RuntimeDirectory=aeon
+RuntimeDirectory=stab
 
 # Clearnet config
 #
 Type=forking
-PIDFile=/run/aeon/aeond.pid
-ExecStart=/usr/bin/aeond --config-file /etc/aeond.conf \
-    --detach --pidfile /run/aeon/aeond.pid
+PIDFile=/run/stab/stabd.pid
+ExecStart=/usr/bin/stabd --config-file /etc/stabd.conf \
+    --detach --pidfile /run/stab/stabd.pid
 
 # Tor config
 #
@@ -27,7 +27,7 @@ ExecStart=/usr/bin/aeond --config-file /etc/aeond.conf \
 ## host in the LAN, VPN, etc, the RPC must bind to 0.0.0.0, but
 ## by default torsocks only allows binding to localhost.
 #Environment=TORSOCKS_ALLOW_INBOUND=1
-#ExecStart=/usr/bin/torsocks /usr/bin/aeond --config-file /etc/aeond.conf \
+#ExecStart=/usr/bin/torsocks /usr/bin/stabd --config-file /etc/stabd.conf \
 #    --non-interactive
 
 Restart=always
